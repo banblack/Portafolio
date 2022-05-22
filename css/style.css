@@ -25,7 +25,9 @@ section {
 .servicios,
 .habilidad,
 .equipo,
-.contacto {
+.contacto,
+footer {
+  
   font-family: "Poppins", sans-serif;
 }
 
