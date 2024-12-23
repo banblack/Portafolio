@@ -1,0 +1,724 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+/* Inicio Seccion Contenido Parecido */
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+section {
+  padding: 100px 0;
+}
+
+.acerca-de,
+.servicios,
+.habilidad,
+.equipo,
+.contacto,
+footer {
+  
+  font-family: "Poppins", sans-serif;
+}
+
+.acerca-de .acerca-de-contenido,
+.servicios .servicios-contenido,
+.habilidad .habilidades-contenido,
+.contacto,
+.contenido-contacto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+section .titulo {
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+section .titulo::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 3px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111;
+}
+
+section .titulo::after {
+  position: absolute;
+  padding: 5px;
+  bottom: -12px;
+  left: 50%;
+  color: crimson;
+  font-size: 20px;
+  transform: translateX(-50%);
+  background: #fff;
+}
+
+/*Estilo Navbar*/
+.navbar {
+  /* background: crimson;  */
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  font-family: "Ubuntu", sans-serif;
+  padding: 30px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  background: crimson;
+  padding: 15px 0;
+}
+
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.navbar .logo a span {
+  color: crimson;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.navbar .menu li a:hover {
+  color: crimson;
+}
+
+.navbar.sticky .menu li a:hover {
+  color: #fff;
+}
+
+/* Boton Menu */
+.boton-menu {
+  
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+.scroll-up-btn{
+  position: fixed;
+  height: 50px;
+  width: 45px;
+  background: crimson;
+  right: 35px;
+  bottom: 33px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 35px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+.scroll-up-btn.show{
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 35px;
+
+}
+
+/* Inicio Seccion Acerca de */
+
+.acerca-de .titulo::after {
+  content: "QUIEN SOY";
+}
+
+.acerca-de .acerca-de-contenido .izquierda {
+  width: 45%;
+}
+
+.acerca-de .acerca-de-contenido .izquierda img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.acerca-de .acerca-de-contenido .derecha {
+  width: 55%;
+}
+
+.acerca-de .acerca-de-contenido .derecha .texto {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.acerca-de .acerca-de-contenido .derecha .texto span {
+  color: crimson;
+}
+
+.acerca-de .acerca-de-contenido .derecha p {
+  text-align: justify;
+}
+
+.acerca-de .acerca-de-contenido .derecha a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.acerca-de .acerca-de-contenido .derecha a:hover {
+  color: crimson;
+  background: none;
+}
+
+
+/* Seccion Inicio */
+.inicio {
+  display: flex;
+  background: url(./img/banner2.jpeg) no-repeat center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.inicio .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.inicio .inicio-contenido .texto-1 {
+  font-size: 27px;
+}
+
+.inicio .inicio-contenido .texto-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.inicio .inicio-contenido .texto-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.inicio .inicio-contenido .texto-3 span {
+  color: crimson;
+  font-weight: 500;
+}
+
+.inicio .inicio-contenido a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+
+.inicio .inicio-contenido a:hover {
+  color: #fff;
+  background: none;
+}
+
+
+
+/* Seccion Servicios */
+.servicios,
+.equipo {
+  background: #111;
+  color: #fff;
+}
+.servicios .titulo::before,
+.equipo .titulo::before {
+  background: #fff;
+}
+
+.servicios .titulo::after,
+.equipo .titulo::after {
+  content: "Que Ofrezco";
+  background: #111;
+}
+
+.servicios .servicios-contenido .card {
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  padding: 20px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.servicios .servicios-contenido .card i {
+  font-size: 50px;
+  color: crimson;
+  transition: color 0.3s ease;
+}
+
+.servicios .servicios-contenido .card:hover {
+  background: crimson;
+}
+
+.servicios .servicios-contenido .card:hover i {
+  color: #fff;
+}
+
+.servicios .servicios-contenido .card:hover .box {
+  transform: scale(1.05);
+}
+
+.servicios .servicios-contenido .card .box {
+  transition: all 0.3s ease;
+}
+
+.servicios .servicios-contenido .card .texto {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+/* Inicio Seccion Mis Habilidades */
+.habilidad .titulo::after {
+  content: "que es lo que se ";
+}
+
+.habilidad .habilidades-contenido .columna {
+  width: calc(50% - 30px);
+}
+
+.habilidad .habilidades-contenido .izquierda .texto {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.habilidad .habilidades-contenido .izquierda p {
+  text-align: justify;
+}
+.habilidad .habilidades-contenido .izquierda a {
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+}
+.habilidad .habilidades-contenido .izquierda a:hover {
+  color: crimson;
+  background: none;
+}
+.habilidad .habilidades-contenido .derecha .barra {
+  margin-bottom: 15px;
+}
+
+.habilidad .habilidades-contenido .derecha .informacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.habilidad .habilidades-contenido .derecha .span {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.habilidad .habilidades-contenido .derecha .linea {
+  height: 5px;
+  width: 100%;
+  background: lightgrey;
+  position: relative;
+}
+
+.habilidad .habilidades-contenido .derecha .linea::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+  background: crimson;
+}
+.habilidades-contenido .derecha .html::before {
+  width: 90%;
+}
+.habilidades-contenido .derecha .css::before {
+  width: 70%;
+}
+.habilidades-contenido .derecha .js::before {
+  width: 60%;
+}
+.habilidades-contenido .derecha .php::before {
+  width: 75%;
+}
+
+/* Inicio Seccion Equipo */
+.equipo .titulo::after {
+  content: "Quien Trabaja conmigo";
+}
+
+.equipo .carousel .card {
+  background: #222;
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.equipo .carousel .card:hover {
+  background: crimson;
+  transform: scale(1.05);
+}
+.equipo .carousel .card .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.equipo .carousel .card:hover .box {
+  transform: scale(1.05);
+}
+.equipo .carousel .card .texto {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+.equipo .carousel .card img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid crimson;
+}
+
+.equipo .carousel .card:hover img {
+  border-color: #fff;
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 15px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid crimson !important;
+  transition: all 0.3s ease;
+}
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover {
+  background: crimson;
+}
+
+/* Inicio Seccion Contacto */
+.contacto .titulo::after {
+  content: "Mantengamos el contacto";
+}
+.contacto .contenido-contacto .columna {
+  width: calc(50% - 30px);
+}
+.contacto .contenido-contacto .texto {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contacto .contenido-contacto .izquierda p {
+  text-align: justify;
+}
+.contacto .contenido-contacto .izquierda .iconos {
+  margin: 10px 0;
+}
+.contacto .contenido-contacto .row {
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contacto .contenido-contacto .row .informacion {
+  margin-left: 30px;
+}
+.contacto .contenido-contacto .row i {
+  font-size: 25px;
+  color: crimson;
+}
+.contacto .contenido-contacto .informacion .head {
+  font-weight: 500;
+}
+.contacto .contenido-contacto .informacion .sub-titulo {
+  color: #333;
+}
+.contacto .derecha form .fields {
+  display: flex;
+
+}
+.contacto .derecha form .field,
+.contacto .derecha from .fields .field{
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contacto .derecha form .field input,
+.contacto .derecha form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+.contacto .derecha form .field input:focus,
+.contacto .derecha form .textarea textarea:focus{
+  border-color: #b3b3b3;
+}
+.contacto .derecha form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contacto .derecha form .boton-form{
+display: flex;
+align-items: center;
+}
+.derecha form .boton-form button{
+  color: #fff;
+  display: block;
+  width: 160px!important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+background:crimson;
+border: 2px solid crimson;
+transition: all 0.3s ease;
+}
+.derecha form .boton-form button:hover{
+  color: crimson;
+  background: none;
+  
+}
+.derecha form span{
+  color: crimson;
+  margin-left: 35px;
+  display: none;
+}
+/* Seccion Footer */
+footer{
+  background: #111;
+  padding: 20px 23px;
+color: #fff;
+}
+footer span a{
+  color: crimson;
+text-decoration: none;
+}
+footer span a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+/* Inicio responsive media query  */
+@media (max-width: 1300px) {
+  .inicio .max-width {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 1104px) {
+  .acerca-de .acerca-de-contenido .izquierda img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 947px) {
+  .max-width {
+    padding: 0 50px;
+  }
+
+  .boton-menu {
+    z-index: 999;
+    display: block;
+  }
+
+  .boton-menu i.active:before {
+    content: "\f00d";
+  }
+
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+  .navbar .menu li {
+    display: block;
+  }
+
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .inicio .inicio-contenido a {
+    font-size: 23px;
+    padding: 10px 30px;
+  }
+
+  .inicio .inicio-contenido .texto-2 {
+    font-size: 70px;
+  }
+
+  .inicio .inicio-contenido .texto-3 {
+    font-size: 35px;
+  }
+
+  .max-width {
+    max-width: 800;
+  }
+
+  .acerca-de .acerca-de-contenido .columna {
+    width: 50%;
+  }
+
+  .acerca-de .acerca-de-contenido .izquierda {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+
+  .acerca-de .acerca-de-contenido .derecha {
+    flex: 100%;
+  }
+
+  .servicios .servicios-contenido .card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+  .habilidad .habilidades-contenido .columna,
+  .contacto .contenido-contacto .columna {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  
+}
+
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+
+  .inicio .inicio-contenido .texto-2 {
+    font-size: 60px;
+  }
+
+  .inicio .inicio-contenido .texto-3 {
+    font-size: 32px;
+  }
+
+  .inicio .inicio-contenido a {
+    font-size: 20px;
+    padding: 9px 25px;
+  }
+
+  .servicios .servicios-contenido .card,
+  .habilidad .habilidades-contenido .columna {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .inicio .inicio-contenido .texto-2 {
+    font-size: 50px;
+  }
+
+  .inicio .inicio-contenido .texto-3 {
+    font-size: 27px;
+  }
+
+  .inicio .inicio-contenido a {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+}
