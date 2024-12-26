@@ -61,36 +61,39 @@ $(document).ready(function () {
     //Formulario
 
     
-        const form = document.querySelector("form"),
-        statusTxt = form.querySelector(".boton-form span");
-        form.onsubmit = (e)=>{
-          e.preventDefault();
-          statusTxt.style.color = "#0D6EFD";
-          statusTxt.style.display = "block";
-          statusTxt.innerText = "Sending your message...";
-          
-        
-          let xhr = new XMLHttpRequest();
-          xhr.open("POST", "./php/email.php", true);
-          xhr.onload = ()=>{
-            if(xhr.readyState == 4 && xhr.status == 200){
-              let response = xhr.response;
-              if(response.indexOf("required") != -1 || response.indexOf("valid") != -1 || response.indexOf("failed") != -1){
-                statusTxt.style.color = "red";
-              }else{
-                form.reset();
-                setTimeout(()=>{
-                  statusTxt.style.display = "none";
-                }, 3000);
-              }
-              statusTxt.innerText = response;
-              
-            }
-          }
-          let formData = new FormData(form);
-          xhr.send(formData);
-        }
+    const form = document.querySelector("form"),
+    statusTxt = form.querySelector(".boton-form span");
 
+form.onsubmit = (e) => {
+e.preventDefault(); // Previene el envío estándar del formulario
+statusTxt.style.color = "#0D6EFD";
+statusTxt.style.display = "block";
+statusTxt.innerText = "Enviando tu mensaje...";
+
+// Crear la solicitud para Formspree
+let xhr = new XMLHttpRequest();
+xhr.open("POST", "https://formspree.io/f/mrbbgdbo", true); // URL de Formspree
+xhr.setRequestHeader("Accept", "application/json"); // Indica que esperamos un JSON como respuesta
+
+xhr.onload = () => {
+  if (xhr.readyState == 4 && xhr.status == 200) {
+    // Éxito en el envío
+    form.reset(); // Resetea el formulario
+    statusTxt.style.color = "green";
+    statusTxt.innerText = "¡Mensaje enviado exitosamente!";
+    setTimeout(() => {
+      statusTxt.style.display = "none";
+    }, 3000);
+  } else {
+    // Error en el envío
+    statusTxt.style.color = "red";
+    statusTxt.innerText = "Error al enviar el mensaje. Intenta de nuevo.";
+  }
+};
+
+let formData = new FormData(form); // Captura los datos del formulario
+xhr.send(formData); // Envía los datos a Formspree
+};
 
     
 });
